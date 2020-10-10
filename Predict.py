@@ -96,6 +96,8 @@ Physical_entrybox.grid(row=7,column=1)
 
 
 ##############################################################
+result = ''
+empty=''
 
 import pandas as pd
 DF = pd.DataFrame()
@@ -121,12 +123,6 @@ def action():
     DF.loc[0,'Physical']=PHY
 
     DB=DF
-
-
-
-################################################################
-result = ''
-def Output():
     DB["Age"] = pd.to_numeric(DB["Age"])
     DB["Sbp"] = pd.to_numeric(DB["Sbp"]) 
     DB["Dbp"] = pd.to_numeric(DB["Dbp"])
@@ -135,9 +131,7 @@ def Output():
     DB["Smoking"] = pd.to_numeric(DB["Smoking"])
     DB["Alcohol"] = pd.to_numeric(DB["Alcohol"])
     DB["Physical"] = pd.to_numeric(DB["Physical"])
-  
 
-#####################################################################
 
     output=classifier.predict(DB)
     print(output[0])
@@ -145,6 +139,7 @@ def Output():
             result='Patient Might Have some cardiovascular Disease :('
     elif output[0]==0:
             result='Patient is Alright :)'
+    Predict_entrybox.insert(1,str(empty))        
     Predict_entrybox.insert(1,str(result))
 
 ###################################################################
@@ -153,12 +148,9 @@ Predict_entrybox=ttk.Entry(win,width=60)
 Predict_entrybox.grid(row=21,column=1)
 Predict_entrybox.insert(1,str(result))
 
-Submit_button=ttk.Button(win,text="Submit",command=action)
 
 
-Submit_button.grid(row=20,column=0)
-
-Predict_button=ttk.Button(win,text="Predict",command=Output)
+Predict_button=ttk.Button(win,text="Predict",command=action)
 Predict_button.grid(row=21,column=0)
 win.geometry("800x600")
 win.mainloop()
