@@ -1,7 +1,9 @@
-# Cardio_disease
+# Vital_Sign
 An AI project 
 
 HOW TO RUN THE PROJECT
+
+________________________________FOR CARIO__________________________________________
 
 STEP -1 DOWNLOAD ANACONDA SOFTWARE FROM THE GIVEN LINK IF YOU DON'T HAVE IT INSTALLED
 https://www.anaconda.com/products/individual
@@ -15,8 +17,18 @@ STEP -4 OPEN SPYDER IN ANACONDA 3
 
 STEP -5 OPEN THE CLONED REPOSITORY FOLDER IN SPYDER
 
-STEP -6 OPEN predict.py FILE IN SPYDER AND PRESS F5 TO EXECUTE
+STEP -6 OPEN predict.py FILE Cardo FOLDERIN SPYDER AND PRESS F5 TO EXECUTE
 
 ENTER VALUES IN ALL THE FIELD AS INSTRUCTED AND THEN FIRST CLICK ON SUBMIT AND THEN ON PREDICT
+
+
+_____________________________FOR HEART_RATE ANALYSIS___________________________________________
+
+STEP -1 DOWNLOAD ANACONDA AS MENTIONED IN ABOVE STEP AND OPEN heart_rate.py WITH 
+
+STEP -2 RUN THE PROJECT
+
+
+
 
 
